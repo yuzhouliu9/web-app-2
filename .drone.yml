@@ -3,10 +3,6 @@ kind: pipeline
 type: kubernetes
 name: default
 
-trigger:
-  branch:
-  - main
-
 steps:
 - name: triggered-by-a
   image: plugins/kaniko-ecr
@@ -25,8 +21,10 @@ steps:
     paths:
       include:
         - folder_a/**
+    branch:
+      - main
     event:
-    - push
+      - push
 
 - name: triggered-by-b
   image: plugins/kaniko-ecr
@@ -45,5 +43,7 @@ steps:
     paths:
       exclude:
         - folder_a/**
+    branch:
+      - main
     event:
-    - push
+      - push
