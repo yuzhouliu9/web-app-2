@@ -26,7 +26,7 @@ steps:
     event:
       - push
 
-- name: triggered-by-b
+- name: triggered-by-anything-except-a
   image: plugins/kaniko-ecr
   settings:
     create_repository: true
