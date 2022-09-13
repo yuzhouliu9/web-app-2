@@ -7,8 +7,7 @@ steps:
 - name: triggered-by-a
   image: python:3.4
   commands:
-  - pip install flask
-  - python app.py
+  - pytest
   when:
     paths:
       include:
@@ -21,8 +20,7 @@ steps:
 - name: triggered-by-b
   image: python:3.4
   commands:
-  - pip install flask
-  - python app.py
+  - pytest
   when:
     paths:
       include:
@@ -35,8 +33,7 @@ steps:
 - name: triggered-by-everything-else
   image: python:3.4
   commands:
-  - pip install flask
-  - python app.py
+  - pytest
   when:
     paths:
       exclude:
