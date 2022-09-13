@@ -41,7 +41,7 @@ steps:
       from_secret: ecr_secret_key
   when:
     paths:
-      exclude:
+      include:
         - folder_b/**
     branch:
       - main
