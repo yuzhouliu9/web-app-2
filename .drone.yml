@@ -31,7 +31,7 @@ steps:
     add_repos: [mongodb=https://10gen.github.io/helm-charts]
     namespace: devops
     release: yuzhou-web-app-2
-    values: "image.tag=git-${DRONE_COMMIT_SHA:0:7}-amd64,image.repository=795250896452.dkr.ecr.us-east-1.amazonaws.com/devops/${DRONE_REPO_NAME}"
+    values: "image.tag=git-${DRONE_COMMIT_SHA:0:7},image.repository=795250896452.dkr.ecr.us-east-1.amazonaws.com/devops/${DRONE_REPO_NAME}"
     values_files: ["environments/staging.yaml"]
     api_server: https://api.staging.corp.mongodb.com
     kubernetes_token:
