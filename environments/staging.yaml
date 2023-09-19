@@ -1,0 +1,5 @@
+ingress:
+  enabled: true
+  path: /web-app-2
+  hosts:
+  - yuzhou-web-app.devops.staging.corp.mongodb.com
